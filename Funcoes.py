@@ -66,7 +66,3 @@ def posiciona_frota(frota):
             tabuleiro[linha_navio][coluna_navio] = 1
 
     return tabuleiro
-
-
-
-#### TESTE
