@@ -16,6 +16,30 @@ def define_posicoes(dados_posicao):
 
     return posicao
 
+def preenche_frota(dados_posicion,tipo_navio,frota):
+
+    linha = dados_posicion['linha']
+    coluna = dados_posicion['coluna']
+    orientacao = dados_posicion['orientacao']
+    tamanho = dados_posicion['tamanho']
+
+    novo_barco = {}
+    novo_barco['tipo'] = tipo_navio
+    novo_barco['posicoes'] = [[linha,coluna]]
+
+    for i in range(tamanho-1):
+
+        if orientacao == "horizontal":
+            coluna += 1
+        if orientacao == "vertical":
+            linha += 1
+        
+        novo_barco['posicoes'].append([linha,coluna])
+
+    frota.append(novo_barco)
+
+    return frota
+
 def faz_jogada(tabuleiro,linha,coluna):
     
     if tabuleiro[linha][coluna] == 0:
