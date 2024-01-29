@@ -15,3 +15,12 @@ def define_posicoes(dados_posicao):
         posicao.append([linha,coluna])
 
     return posicao
+
+def faz_jogada(tabuleiro,linha,coluna):
+    
+    if tabuleiro[linha][coluna] == 0:
+        tabuleiro[linha][coluna] = "-"
+    if tabuleiro[linha][coluna] == 1:
+        tabuleiro[linha][coluna] = "X"
+    
+    return tabuleiro
