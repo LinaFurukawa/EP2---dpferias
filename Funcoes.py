@@ -84,3 +84,11 @@ def afundados(frota,tabuleiro):
             afundados += 1
 
     return afundados
+
+
+
+
+
+
+
+###### testeeee
